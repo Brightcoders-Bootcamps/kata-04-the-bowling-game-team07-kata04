@@ -10,14 +10,47 @@
 
 require_relative './bowling_throw'
 require_relative './bowling_frame'
+require_relative './bowling_score'
+require_relative './bowling_rules'
 
 class BowlingGame
   def start
     throw = BowlingThrow.new
     set_frame = BowlingFrame.new
+    set_score = BowlingScore.new
+    set_rule = BowlingRules.new
 
-    result_throw = throw.get_throw
+    (0..9).each do |i|
+      (0..1).each do |i|
+        @result_throw = throw.throw_get(0, set_rule.pin_get)
+        set_frame.frame(@result_throw)
+        if set_rule.strike(set_frame.get_frames) == true then
+          break
+        end
+        set_rule.pin(@result_throw)
+      end
+      if i == 9 then
+        if set_rule.strike(set_frame.get_frames) == true then
+          set_rule.reset_pin
+          @result_throw = throw.throw_get(0, set_rule.pin_get)
+          set_frame.frame(@result_throw)
+        elsif set_rule.spare(set_frame.get_frames) == true then
+          set_rule.reset_pin
+          @result_throw = throw.throw_get(0, set_rule.pin_get)
+          set_frame.frame(@result_throw)
+        end
+      end
+      set_score.score(set_frame.get_frames)
+      set_rule.spare(set_frame.get_frames)
+      set_frame.clean_frame
+      set_rule.reset_pin
+    end
+    
 
-    set_frame.frame(result_throw)
+    puts set_score.score_get.inspect
+
   end
 end
+
+test = BowlingGame.new
+test.start

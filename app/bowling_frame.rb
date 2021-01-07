@@ -10,4 +10,8 @@ class BowlingFrame
   def get_frames
     @@frames
   end
+
+  def clean_frame
+    @@frames = []
+  end
 end
