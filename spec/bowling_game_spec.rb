@@ -3,11 +3,11 @@
 require './app/bowling_game'
 
 describe BowlingGame do
-  describe 'start game' do
-    context 'say hello to player' do
-      it 'return string message' do
+  describe 'BowlingGame call metod start' do
+    context 'start game' do
+      it 'return result score / frames' do
         game = BowlingGame.new
-        expect(game.start).to satisfy { |value| !value.nil? }
+        expect(game.start.length).to eq(10)
       end
     end
   end

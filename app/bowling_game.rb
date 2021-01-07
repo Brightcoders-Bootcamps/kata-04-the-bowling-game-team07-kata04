@@ -45,9 +45,10 @@ class BowlingGame
       set_rule.reset_pin
     end
 
-    puts set_score.score_get.inspect
+    # puts set_score.score_get.inspect
+    set_score.score_get
   end
 end
 
-test = BowlingGame.new
-test.start
+# test = BowlingGame.new
+# test.start
