@@ -1,13 +1,13 @@
-class BowlingScore
+# frozen_string_literal: true
 
-  @@scores = []  
+class BowlingScore
+  @@scores = []
 
   def score(frame)
     @@scores << frame
   end
-  
+
   def score_get
     @@scores
   end
-
 end

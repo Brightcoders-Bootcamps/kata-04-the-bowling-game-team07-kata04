@@ -21,20 +21,19 @@ class BowlingGame
     set_rule = BowlingRules.new
 
     (0..9).each do |i|
-      (0..1).each do |i|
+      (0..1).each do |_i|
         @result_throw = throw.throw_get(0, set_rule.pin_get)
         set_frame.frame(@result_throw)
-        if set_rule.strike(set_frame.get_frames) == true then
-          break
-        end
+        break if set_rule.strike(set_frame.get_frames) == true
+
         set_rule.pin(@result_throw)
       end
-      if i == 9 then
-        if set_rule.strike(set_frame.get_frames) == true then
+      if i == 9
+        if set_rule.strike(set_frame.get_frames) == true
           set_rule.reset_pin
           @result_throw = throw.throw_get(0, set_rule.pin_get)
           set_frame.frame(@result_throw)
-        elsif set_rule.spare(set_frame.get_frames) == true then
+        elsif set_rule.spare(set_frame.get_frames) == true
           set_rule.reset_pin
           @result_throw = throw.throw_get(0, set_rule.pin_get)
           set_frame.frame(@result_throw)
@@ -45,10 +44,8 @@ class BowlingGame
       set_frame.clean_frame
       set_rule.reset_pin
     end
-    
 
     puts set_score.score_get.inspect
-
   end
 end
 
