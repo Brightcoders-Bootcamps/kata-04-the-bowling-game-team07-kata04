@@ -47,7 +47,7 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2021-01-06 17:46:14 -0600'>2021-01-06 17:46:14 -0600</time>
+          Updated <time class='js-timeago' datetime='2021-01-07 14:34:05 -0600'>2021-01-07 14:34:05 -0600</time>
         
       </span>
     </div>
@@ -73,10 +73,10 @@
             </div>
             <div class="col-md-3">
               <div><span class="metric">N/A</span><small> complexity/method</small></div>
-              <div><span class="metric">1</span><small> churn</small></div>
+              <div><span class="metric">2</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">14.46</span><small> complexity</small></div>
+              <div><span class="metric">13.3</span><small> complexity</small></div>
               <div><span class="metric">0</span><small> duplications</small></div>
             </div>
           </div>
@@ -102,11 +102,11 @@
 require &#39;./app/bowling_game&#39;
 
 describe BowlingGame do
-  describe &#39;start game&#39; do
-    context &#39;say hello to player&#39; do
-      it &#39;return string message&#39; do
+  describe &#39;BowlingGame call metod start&#39; do
+    context &#39;start game&#39; do
+      it &#39;return result score / frames&#39; do
         game = BowlingGame.new
-        expect(game.start).to satisfy { |value| !value.nil? }
+        expect(game.start.length).to eq(10)
       end
     end
   end

@@ -47,7 +47,7 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2021-01-06 19:29:32 -0600'>2021-01-06 19:29:32 -0600</time>
+          Updated <time class='js-timeago' datetime='2021-01-06 19:48:17 -0600'>2021-01-06 19:48:17 -0600</time>
         
       </span>
     </div>
@@ -68,12 +68,12 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">36</span><small> lines of codes</small></div>
+              <div><span class="metric">37</span><small> lines of codes</small></div>
               <div><span class="metric">6</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">1.8</span><small> complexity/method</small></div>
-              <div><span class="metric">1</span><small> churn</small></div>
+              <div><span class="metric">2</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">10.76</span><small> complexity</small></div>
@@ -88,7 +88,7 @@
             <li><a href="#" id="toggle-code" class="toggle-button button">code</a></li>
             <li class="active">
               <a href="#" id="toggle-smells" class="toggle-button button">
-                4
+                3
                 smells
               </a>
             </li>
@@ -99,8 +99,9 @@
 
     <code class="prettyprint linenums lang-ruby file-code js-file-code"># frozen_string_literal: true
 
-class BowlingRules<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md" target="_blank"><b>IrresponsibleModule</b></a>        </span>      </div>      <span>BowlingRules has no descriptive comment</span>          </div>  </li></ol>
-  @@pins = 10<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L4" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L25" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L30" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L34" class="js-smell-location">4</a>                  </div>  </li></ol>
+# Class fo rules of the game
+class BowlingRules
+  @@pins = 10<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L5" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L27" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L31" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L35" class="js-smell-location">4</a>                  </div>  </li></ol>
 
   def sum(array)<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Utility-Function.md" target="_blank"><b>UtilityFunction</b></a>        </span>      </div>      <span>BowlingRules#sum doesn't depend on instance state (maybe move it to another class?)</span>          </div>  </li></ol>
     array.reduce(:+)
@@ -121,16 +122,16 @@ class BowlingRules<ol class="nocode errors smells">  <li>    <div class="descrip
   end
 
   def pin(throw)
-    @@pins -= throw<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L4" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L25" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L30" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L34" class="js-smell-location">4</a>                  </div>  </li></ol>
-    @@pins<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L4" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L25" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L30" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L34" class="js-smell-location">4</a>                  </div>  </li></ol>
+    @@pins -= throw<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L5" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L27" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L31" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L35" class="js-smell-location">4</a>                  </div>  </li></ol>
+    @@pins<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L5" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L27" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L31" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L35" class="js-smell-location">4</a>                  </div>  </li></ol>
   end
 
   def pin_get
-    @@pins<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L4" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L25" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L30" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L34" class="js-smell-location">4</a>                  </div>  </li></ol>
+    @@pins<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L5" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L27" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L31" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L35" class="js-smell-location">4</a>                  </div>  </li></ol>
   end
 
   def reset_pin
-    @@pins = 10<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L4" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L25" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L30" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L34" class="js-smell-location">4</a>                  </div>  </li></ol>
+    @@pins = 10<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Class-Variable.md" target="_blank"><b>ClassVariable</b></a>        </span>      </div>      <span>BowlingRules declares the class variable '@@pins'</span>              <span>Locations:</span>                  <a href="bowling_rules.html#L5" class="js-smell-location">0</a>                  <a href="bowling_rules.html#L26" class="js-smell-location">1</a>                  <a href="bowling_rules.html#L27" class="js-smell-location">2</a>                  <a href="bowling_rules.html#L31" class="js-smell-location">3</a>                  <a href="bowling_rules.html#L35" class="js-smell-location">4</a>                  </div>  </li></ol>
   end
 end
 </code>

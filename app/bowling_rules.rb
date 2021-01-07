@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Class fo rules of the game
 class BowlingRules
   @@pins = 10
 

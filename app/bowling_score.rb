@@ -10,4 +10,8 @@ class BowlingScore
   def score_get
     @@scores
   end
+
+  def print_score
+    @@scores.flatten.sum
+  end
 end

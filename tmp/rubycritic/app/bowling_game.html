@@ -47,7 +47,7 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2021-01-06 19:29:32 -0600'>2021-01-06 19:29:32 -0600</time>
+          Updated <time class='js-timeago' datetime='2021-01-07 14:34:05 -0600'>2021-01-07 14:34:05 -0600</time>
         
       </span>
     </div>
@@ -68,15 +68,15 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">53</span><small> lines of codes</small></div>
+              <div><span class="metric">54</span><small> lines of codes</small></div>
               <div><span class="metric">1</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">56.7</span><small> complexity/method</small></div>
-              <div><span class="metric">2</span><small> churn</small></div>
+              <div><span class="metric">57.8</span><small> complexity/method</small></div>
+              <div><span class="metric">4</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">56.72</span><small> complexity</small></div>
+              <div><span class="metric">57.79</span><small> complexity</small></div>
               <div><span class="metric">0</span><small> duplications</small></div>
             </div>
           </div>
@@ -88,7 +88,7 @@
             <li><a href="#" id="toggle-code" class="toggle-button button">code</a></li>
             <li class="active">
               <a href="#" id="toggle-smells" class="toggle-button button">
-                15
+                16
                 smells
               </a>
             </li>
@@ -113,7 +113,7 @@ require_relative &#39;./bowling_score&#39;
 require_relative &#39;./bowling_rules&#39;
 
 class BowlingGame<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Instance-Variable-Assumption.md" target="_blank"><b>InstanceVariableAssumption</b></a>        </span>      </div>      <span>BowlingGame assumes too much for instance variable '@result_throw'</span>          </div>  </li>  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md" target="_blank"><b>IrresponsibleModule</b></a>        </span>      </div>      <span>BowlingGame has no descriptive comment</span>          </div>  </li></ol>
-  def start<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flog/" target="_blank"><b>HighComplexity</b></a>        </span>      </div>      <span>BowlingGame#start has a flog score of 57</span>          </div>  </li>  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md" target="_blank"><b>TooManyStatements</b></a>        </span>      </div>      <span>BowlingGame#start has approx 21 statements</span>          </div>  </li></ol>
+  def start<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flog/" target="_blank"><b>HighComplexity</b></a>        </span>      </div>      <span>BowlingGame#start has a flog score of 58</span>          </div>  </li>  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md" target="_blank"><b>TooManyStatements</b></a>        </span>      </div>      <span>BowlingGame#start has approx 22 statements</span>          </div>  </li></ol>
     throw = BowlingThrow.new
     set_frame = BowlingFrame.new
     set_score = BowlingScore.new
@@ -144,7 +144,8 @@ class BowlingGame<ol class="nocode errors smells">  <li>    <div class="descript
       set_rule.reset_pin<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>BowlingGame#start calls 'set_rule.reset_pin' 3 times</span>              <span>Locations:</span>                  <a href="bowling_game.html#L33" class="js-smell-location">0</a>                  <a href="bowling_game.html#L37" class="js-smell-location">1</a>                  <a href="bowling_game.html#L45" class="js-smell-location">2</a>                  </div>  </li>  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md" target="_blank"><b>FeatureEnvy</b></a>        </span>      </div>      <span>BowlingGame#start refers to 'set_rule' more than self (maybe move it to another class?)</span>              <span>Locations:</span>                  <a href="bowling_game.html#L25" class="js-smell-location">0</a>                  <a href="bowling_game.html#L27" class="js-smell-location">1</a>                  <a href="bowling_game.html#L29" class="js-smell-location">2</a>                  <a href="bowling_game.html#L32" class="js-smell-location">3</a>                  <a href="bowling_game.html#L33" class="js-smell-location">4</a>                  <a href="bowling_game.html#L34" class="js-smell-location">5</a>                  <a href="bowling_game.html#L36" class="js-smell-location">6</a>                  <a href="bowling_game.html#L37" class="js-smell-location">7</a>                  <a href="bowling_game.html#L38" class="js-smell-location">8</a>                  <a href="bowling_game.html#L43" class="js-smell-location">9</a>                  <a href="bowling_game.html#L45" class="js-smell-location">10</a>                  </div>  </li></ol>
     end
 
-    puts set_score.score_get.inspect
+    set_score.score_get<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>BowlingGame#start calls 'set_score.score_get' 2 times</span>              <span>Locations:</span>                  <a href="bowling_game.html#L48" class="js-smell-location">0</a>                  <a href="bowling_game.html#L49" class="js-smell-location">1</a>                  </div>  </li></ol>
+    puts set_score.score_get.inspect<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>BowlingGame#start calls 'set_score.score_get' 2 times</span>              <span>Locations:</span>                  <a href="bowling_game.html#L48" class="js-smell-location">0</a>                  <a href="bowling_game.html#L49" class="js-smell-location">1</a>                  </div>  </li></ol>
   end
 end
 
